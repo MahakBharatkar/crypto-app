@@ -1,0 +1,19 @@
+.navbar {
+  max-height: 90px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.menu_item {
+  color: #da5bf0;
+
+  font-size: 18px;
+  margin: 0 20px 0 20px;
+}
+
+.menu_item:hover {
+  color: #94bbf1;
+
+  cursor: pointer;
+}
