@@ -1,8 +1,12 @@
+"use client"
+import useGetTable from "./useGetTable";
 
 const CryptoTable = () => {
-  return (
-    <div>CryptoTable</div>
-  )
-}
+  const { data, isLoading } = useGetTable();
 
-export default CryptoTable
+  console.log("data", data);
+  
+  return <div>CryptoTable</div>;
+};
+
+export default CryptoTable;

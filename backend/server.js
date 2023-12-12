@@ -1,10 +1,18 @@
 require('dotenv').config();
 const express = require("express");
+const cors = require('cors');
 const axios = require("axios");
 const port = 4000;
 
 const app = express();
 app.use(express.json());
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200,
+  };
+  
+  app.use(cors(corsOptions));
 
 const api = axios.create({
   method: "GET",
