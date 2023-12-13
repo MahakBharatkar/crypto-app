@@ -24,6 +24,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 3. run backend server by using command 
         node server.js
 
+***********
+
+## Architechture
+1. Have used module federation in css since I was recently working on that
+2. Have used Next.js because it's highly recommended for it's versatality. Next.js projects perform better than create-react-app. For future scalability we can easily utilise this architechture.
+3. Used Express and node for the backend as the coinmarketcap api doesn't allow direct http requests to protect users api_key. Also for the future when I require to hit two apis internally, it will be helpful.
+
+
 
 
 
