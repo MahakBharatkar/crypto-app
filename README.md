@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-#Check out the app images 
+##Check out the app images 
 https://github.com/MahakBharatkar/crypto-app/wiki
 ## Getting Started
 
