@@ -5,11 +5,12 @@ const LandingContent = () => {
   return (
     <div className={styles.landing_container}>
       <div className={styles.description}>
-        <span className={styles.heading}>Cryptocurrency App</span>
+        <span className={styles.heading}>Real-Time Market Updates</span>
         <div className={styles.placeholder_text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        Navigate the complexities of the crypto market with confidence. 
+        Our cutting-edge analytics tools aggregate data from various sources to 
+        present you with a clear and concise overview of the 
+        latest market trends, price movements, and trading volumes. 
         </div>
       </div>
 

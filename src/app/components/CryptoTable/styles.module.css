@@ -12,6 +12,10 @@
     flex-direction: column;
     max-width:75% ;
     margin: 0 10%;
+    @media(max-width: 576px){
+        max-width:100% ;
+        margin: 0 0;
+     }
 }
 
 .table_heading{

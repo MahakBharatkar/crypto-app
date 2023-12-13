@@ -19,6 +19,8 @@ const CryptoTable = () => {
     background-color: #3e0061;
     margin-top: 8px;
     margin-bottom: 8px;
+    @media(max-width: 576px){
+      font-size: 10px;
   `,
 
     Row: `
@@ -31,6 +33,9 @@ const CryptoTable = () => {
       background-color: #4f1d6e;
         }
         cursor:pointer;
+    @media(max-width: 576px){
+      font-size: 10px;
+  }
 `,
   };
 
