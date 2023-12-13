@@ -1,43 +1,32 @@
-"use client";
 import useGetTable from "./useGetTable";
 import { CompactTable } from "@table-library/react-table-library/compact";
 import { useTheme } from "@table-library/react-table-library/theme";
-import {
-  DEFAULT_OPTIONS,
-  getTheme,
-} from "@table-library/react-table-library/chakra-ui";
+import { getTheme } from '@table-library/react-table-library/baseline';
 import { Box } from "@chakra-ui/react";
 import COLUMNS from "../constants/get-columns";
+import styles from './styles.module.css';
 
 const CryptoTable = () => {
-  const { data, isLoading } = useGetTable();
-  const chakraTheme = getTheme(DEFAULT_OPTIONS);
-  const theme = useTheme(chakraTheme);
+  const { data:nodes, loading = false } = useGetTable();
+  const reactTheme = useTheme(getTheme());
+  const theme = {...reactTheme,
+    Table: `
+    border-radius: 10px;
+    `,
+  }
 
-  const nodes = [
-    {
-      id: "0",
-      name: "Shopping List",
-      deadline: new Date(2020, 1, 15),
-      type: "TASK",
-      isComplete: true,
-      nodes: 3,
-    },
-  ];
+  console.log('table', theme);
 
-  console.log("data", data);
-  console.log("COLUMNS", COLUMNS);
-  // const columnData= { data };
   const columnData = { nodes };
 
   return (
     <div>
       <span>CryptoTable</span>
-      <Box p={3} borderWidth="1px" borderRadius="lg">
-        {!isLoading && data?.length !== 0 ? (
-          <CompactTable columns={COLUMNS} data={data} theme={theme} />
+      <div className={styles.box_container}>
+        {!loading && columnData?.length !== 0 ? (
+          <CompactTable className={styles.custom_table} columns={COLUMNS} data={columnData} theme={theme}/>
         ) : null}
-      </Box>
+      </div>
     </div>
   );
 };

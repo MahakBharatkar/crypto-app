@@ -1,30 +1,30 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useReducer, useState } from 'react'
+import axios from "axios";
 
 const useGetTable = () => {
-    const [state, setState] = useState({ data: [], isLoading: true });
 
-  const updateState = data => {
-    setState({
-      data: data,
-      isLoading: false,
-    });
-  };
+  const[data, setData] = useState([]);
+  const[loading, setLoading] = useState(false);
+
+  const getdata = async() => {
+      try {
+          setLoading(true);
+          await axios.get('http://localhost:4000/api').then(res => {
+              setData(res.data);
+          });
+          setLoading(false);
+          
+      } catch (e) {
+          setLoading(false);
+          console.log(e);
+      }
+  }
 
   useEffect(() => {
-    const init = async () =>{
-        try {
-          const res = await fetch('http://localhost:4000/api');
-          const data = await res.json();
-          updateState(data);
-        } catch (err) {
-          console.log(err);
-        }
-      };
-
-    init();
+      getdata();
   }, []);
   
-  return state;
+  return {data, loading};
 
 }
 
