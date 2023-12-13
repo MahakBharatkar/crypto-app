@@ -1,30 +1,52 @@
 import useGetTable from "./useGetTable";
 import { CompactTable } from "@table-library/react-table-library/compact";
 import { useTheme } from "@table-library/react-table-library/theme";
-import { getTheme } from '@table-library/react-table-library/baseline';
-import { Box } from "@chakra-ui/react";
+import { getTheme } from "@table-library/react-table-library/baseline";
 import COLUMNS from "../constants/get-columns";
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 const CryptoTable = () => {
-  const { data:nodes, loading = false } = useGetTable();
+  const { data: nodes, loading = false } = useGetTable();
   const reactTheme = useTheme(getTheme());
-  const theme = {...reactTheme,
+  const theme = {
+    ...reactTheme,
     Table: `
     border-radius: 10px;
+    background-color: #3e0061;
     `,
-  }
 
-  console.log('table', theme);
+    HeaderRow: `
+    background-color: #3e0061;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  `,
+
+    Row: `
+    background-color: #3e0061;
+    color: #ffffff;
+    &:not(:last-of-type) .td {
+      border-bottom: 1px solid #24004a;
+    }
+    &:hover .td {
+      background-color: #4f1d6e;
+        }
+        cursor:pointer;
+`,
+  };
 
   const columnData = { nodes };
 
   return (
-    <div>
-      <span>CryptoTable</span>
+    <div className={styles.table_container}>
+      <span className={styles.table_heading}>Crypto Table</span>
       <div className={styles.box_container}>
         {!loading && columnData?.length !== 0 ? (
-          <CompactTable className={styles.custom_table} columns={COLUMNS} data={columnData} theme={theme}/>
+          <CompactTable
+            className={styles.custom_table}
+            columns={COLUMNS}
+            data={columnData}
+            theme={theme}
+          />
         ) : null}
       </div>
     </div>

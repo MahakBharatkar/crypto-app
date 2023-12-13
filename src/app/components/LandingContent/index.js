@@ -13,8 +13,9 @@ const LandingContent = () => {
         </div>
       </div>
 
-      <div className={styles.image_container}>
+      <div>
         <Image
+        className={styles.custom_image}
           src="/1985.jpg"
           width={600}
           height={500}

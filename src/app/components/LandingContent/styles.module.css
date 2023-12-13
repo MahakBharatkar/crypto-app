@@ -2,20 +2,38 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media(max-width: 576px){
+        flex-direction: column;
+    }
 }
 
 .heading{
     color: #ffffff;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .placeholder_text{
     font-size: 24px;
     color: #94bbf1;
     margin-top: 30px;
+    @media(max-width: 576px){
+        font-size: 16px;
+     }
 }
 
 .description{
     width: 600px;
+    @media(max-width: 576px){
+       width: 300px;
+    }
+}
+
+.custom_image{
+    @media(max-width: 576px){
+        width: 280px;
+        height: 280px;
+        margin-top: 40px;
+     }
 }
