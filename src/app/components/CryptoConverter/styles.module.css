@@ -1,0 +1,114 @@
+.converter_container{
+    min-height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #4f1d6e;
+    border-radius: 10px;
+    background-color: #24004a;
+    margin: 0 15%;
+    padding: 10px;
+    
+}
+
+.label{
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.field_container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px;
+}
+
+.input_style{
+    border: 1px solid #4f216b;
+    border-radius: 8px;
+    padding: 9px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 25px;
+    background: #3e0061;
+}
+
+.select_style{
+    border: 1px solid #4f216b;
+    border-radius: 8px;
+    padding: 10px 35px 10px 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 25px;
+    position: relative;
+    background: #3e0061;
+}
+
+
+.converter_heading{
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 20px 0px;
+}
+
+.convert_button{
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 20px;
+        background: linear-gradient(171deg, #512b9c 0%, #2b56d1 100%);
+        border: none;
+        font-size: 14px;
+        height: fit-content;
+      
+}
+
+.result{
+    margin-top: 30px;
+    padding: 15px 60px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 22px;
+    background: #3e0061;
+    color: #9c80ad;
+
+}
+
+.to_currency{
+    font-size: 18px;
+    font-weight: 600;
+    color: #a68db6;
+}
+
+.lower_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

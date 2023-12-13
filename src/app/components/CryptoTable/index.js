@@ -5,8 +5,8 @@ import { getTheme } from "@table-library/react-table-library/baseline";
 import COLUMNS from "../constants/get-columns";
 import styles from "./styles.module.css";
 
-const CryptoTable = () => {
-  const { data: nodes, loading = false } = useGetTable();
+const CryptoTable = ({ setCurrencies = () => {} }) => {
+  const { data: nodes, loading = false } = useGetTable({ setCurrencies });
   const reactTheme = useTheme(getTheme());
   const theme = {
     ...reactTheme,
@@ -42,7 +42,7 @@ const CryptoTable = () => {
   const columnData = { nodes };
 
   return (
-    <div className={styles.table_container}>
+    <div id="section1" className={styles.table_container}>
       <span className={styles.table_heading}>Crypto Table</span>
       <div className={styles.box_container}>
         {!loading && columnData?.length !== 0 ? (
